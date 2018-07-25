@@ -1,0 +1,32 @@
+<p class="pageHeader">Basket</p>
+
+<div>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+
+
+        </tr>
+        #foreach($product in $products)
+        <tr>
+            <td>$product.getId()</td>
+            <td>$product.getName()</td>
+            <td>$product.getPrice()</td>
+            <td><form action="/basket/$product.getId()/remove" method="post">
+                <input type="submit" value="Remove" class="button center">
+            </form></td>
+
+        <tr>
+            #end
+    </table>
+
+    <p>Total:$basket.giveTotal()</p>
+
+
+      <form action="/basket/buy" method="post">
+        <input type="submit" value="Place Order" class="button center">
+      </form>
+</div>

@@ -1,0 +1,26 @@
+<p class="pageHeader">Clothing</p>
+<div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Colour</th>
+            <th>Range</th>
+            <th></th>
+
+        </tr>
+        <tr>
+            <td>$clothing.getName()</td>
+            <td>$clothing.getPrice()</td>
+            <td>$clothing.getSize()</td>
+            <td>$clothing.getColour()</td>
+            <td>$clothing.getRange()</td>
+            <td><form  action="/clothes/$clothing.getId()/buy" method="post">
+                <input type = "submit"  value = "Add to basket" name="id" class ="button center"/>
+            </form></td>
+
+        <tr>
+    </table>
+
+</div>

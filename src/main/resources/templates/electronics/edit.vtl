@@ -1,0 +1,16 @@
+<p class="pageHeader">Edit Electrical Stock</p>
+<form action="/electronics/$electrical.getId()" method="post">
+    <label for="name">Name:</label>
+    <input id = "name" class="inputbox" type="text" name="name" required="true" value="$electrical.getName()">
+    <label for="price">Price:</label>
+    <input id = "price" class="inputbox" type="text" name="price" required="true" value="$electrical.getPrice()">
+
+    <label for="quantity">Quantity:</label>
+    <input id = "quantity" type="number" name="quantity" required="true" value = "$electrical.getQuantity()" >
+    <label for="model">Model:</label>
+    <input id = "model" type="text" name="model" required="true" class="inputbox" value="$electrical.getModel()">
+    <label for="colour">Colour:</label>
+    <input id = "colour" type="text" name="colour" required="true" class="inputbox" value="$electrical.getColour()">
+    <input type="submit" value="Save" class="button">
+</form>
+<a href="/electronics/$electrical.getId()" class="button center">Cancel</a>

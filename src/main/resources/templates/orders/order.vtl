@@ -1,0 +1,23 @@
+<div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+        #foreach($product in $products)
+        <tr>
+
+            <td>$product.getName()</td>
+            <td>$product.getPrice()</td>
+            <td><a href="/$product.productType()/$product.getId()" class="button center">View Product</a></td>
+
+
+        <tr>
+            #end
+
+    </table>
+
+</div>

@@ -1,0 +1,18 @@
+<p class="pageHeader">Edit Food Stock</p>
+<form action="/foods/$food.getId()" method="post">
+    <label for="name">Name:</label>
+    <input id = "name" class="inputbox" type="text" name="name" required="true" value="$food.getName()">
+    <label for="price">Price:</label>
+
+    <input id = "price" class="inputbox" type="number" name="price" required="true" value="$food.getPrice()">
+    <label for="quantity">Quantity:</label>
+    <input id = "quantity" type="number" name="quantity" required="true" value ="$food.getQuantity()" >
+    <label for="bestBefore">Best Before:</label>
+    <input id = "bestBefore" type="text" name="bestBefore" required="true" class="inputbox" value="$food.bestBeforeToString()">
+    <label for="origin">Origin:</label>
+    <input id = "origin" type="text" name="origin" required="true" class="inputbox" value="$food.getOrigin()">
+    <label for="calories">Calories:</label>
+    <input id = "calories" class="inputbox" type="number" name="calories" required="true" value="$food.getCalories()">
+    <input type="submit" value="Save" class="button">
+</form>
+<a href="/foods/$food.getId()" class="button center">Cancel</a>

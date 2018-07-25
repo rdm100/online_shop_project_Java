@@ -1,0 +1,32 @@
+<p class="pageHeader">Shop Stock</p>
+<a href="/drinks/new" class="button center">New Drink</a>
+<a href="/foods/new" class="button center">New Food</a>
+<a href="/electronics/new" class="button center">New Electrical</a>
+<a href="/clothes/new" class="button center">New Item of Clothing</a>
+<div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+        #foreach($product in $products)
+        <tr>
+
+            <td>$product.getName()</td>
+            <td>$product.getPrice()</td>
+            <td>$product.getQuantity()</td>
+            <td><a href="/$product.productType()/$product.getId()/edit" class="button center">Edit</a></td>
+            <td>     <form action="/$product.productType()/$product.getId()/delete" method="post">
+                <input type="submit" value="Delete" class="button center">
+            </form></td>
+
+        <tr>
+            #end
+
+    </table>
+<p>Till:£$till.getCash()</p>
+</div>

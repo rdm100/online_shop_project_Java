@@ -1,0 +1,24 @@
+<p class="pageHeader">All Electronics</p>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Model</th>
+            <th>Colour</th>
+            <th></th>
+        </tr>
+        #foreach($electrical in $electronics)
+        <tr>
+            <td><a href="/electronics/$electrical.getId()" >$electrical.getName()</a></td>
+            <td>$electrical.getPrice()</td>
+            <td>$electrical.getModel()</td>
+            <td>$electrical.getColour()</td>
+            <td><form  action="/electronics/$electrical.getId()/buy" method="post">
+                <input type = "submit"  value = "Add to basket" name="id" class ="button center"/>
+            </form></td>
+        <tr>
+            #end
+    </table>
+</div>

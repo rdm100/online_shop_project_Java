@@ -1,0 +1,13 @@
+<p class="pageHeader">Update details</p>
+<form action="/account/$customer.getId()" method="post">
+    <label for="name">Name:</label>
+    <input id = "name" class="inputbox" type="text" name="name" required="true" value="$customer.getName()">
+
+    <label for="age">Age:</label>
+    <input id = "age" class="inputbox" type="number" name="age" required="true" value="$customer.getAge()">
+
+    <label for="wallet">Set Funds:</label>
+    <input id = "wallet" type="number" name="wallet" required="true" value ="$customer.getWallet()" >
+
+    <input type="submit" value="Save" class="button">
+</form>

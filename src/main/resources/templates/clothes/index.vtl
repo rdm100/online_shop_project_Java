@@ -1,0 +1,26 @@
+<p class="pageHeader">All Clothes</p>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Size</th>
+            <th>Colour</th>
+            <th>Range</th>
+            <th></th>
+        </tr>
+        #foreach($clothes in $clothes)
+        <tr>
+            <td><a href="/clothes/$clothes.getId()" >$clothes.getName()</a></td>
+            <td>$clothes.getPrice()</td>
+            <td>$clothes.getSize()</td>
+            <td>$clothes.getColour()</td>
+            <td>$clothes.getRange()</td>
+            <td><form  action="/clothes/$clothes.getId()/buy" method="post">
+                <input type = "submit"  value = "Add to basket" name="id" class ="button center"/>
+            </form></td>
+        </tr>
+            #end
+    </table>
+</div>

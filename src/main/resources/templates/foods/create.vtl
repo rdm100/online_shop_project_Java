@@ -1,0 +1,23 @@
+<p class="pageHeader">Add Food Stock</p>
+
+<form action="/foods" method="post">
+    <label for="name">Name:</label>
+    <input id = "name" class="inputbox" type="text" name="name" required="true" >
+
+    <label for="price">Price:</label>
+    <input id = "price" type="number" name="price" required="true" >
+
+    <label for="quantity">Quantity:</label>
+    <input id = "quantity" type="number" name="quantity" required="true" >
+
+    <label for="bestBefore">Best Before:</label>
+    <input id = "bestBefore" type="String" name="bestBefore" required="true" class="inputbox" >
+
+    <label for="origin">Origin:</label>
+    <input id = "origin" type="text" name="origin" required="true" class="inputbox" >
+
+    <label for="calories">Calories:</label>
+    <input id = "calories" type="number" name="calories" required="true" class="inputbox">
+
+    <input type="submit" value="Save" class="button">
+</form>

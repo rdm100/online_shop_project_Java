@@ -1,0 +1,26 @@
+<p class="pageHeader">Search Results</p>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+
+
+        </tr>
+        #foreach($product in $products)
+        <tr>
+            <td>$product.getId()</td>
+            <td>$product.getName()</td>
+            <td>$product.getPrice()</td>
+            <td><a href="/$product.productType()/$product.getId()" class="button center">View</a></td>
+
+
+        <tr>
+            #end
+
+    </table>
+
+</div>

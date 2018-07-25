@@ -1,0 +1,25 @@
+<p class="pageHeader">All Foods</p>
+
+<div class="container">
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Best Before</th>
+            <th>Origin</th>
+            <th>Calories</th>
+        </tr>
+        #foreach($food in $foods)
+        <tr>
+            <td><a href="/foods/$food.getId()" >$food.getName()<a/></td>
+            <td>$food.getPrice()</td>
+            <td>$food.bestBeforeToString()</td>
+            <td>$food.getOrigin()</td>
+            <td>$food.getCalories()</td>
+            <td><form  action="/foods/$food.getId()/buy" method="post">
+                <input type = "submit"  value = "add To Basket" name="id" class ="button center"/>
+            </form></td>
+        <tr>
+            #end
+    </table>
+</div>
